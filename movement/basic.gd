@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 400 # Rapidez (pixels/sec)
+@export var speed : int = 400 # Rapidez (pixels/sec)
+
 
 func _physics_process(delta: float) -> void:
 	velocity = Vector2.ZERO 
@@ -15,3 +16,4 @@ func _physics_process(delta: float) -> void:
 		
 	if velocity.length() > 0:
 		move_and_slide()
+
